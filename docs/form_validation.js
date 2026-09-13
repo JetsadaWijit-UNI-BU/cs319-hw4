@@ -22,6 +22,8 @@ function formValidation() {
         /* Check first name */
         if (allLetter(ulname)) {
           /* Check last name */
+          if (email_validation(uemail)) {
+          }
         }
       }
     }
@@ -81,4 +83,15 @@ function pass_validation(upass, min, max) {
     return false;
   }
   return true;
+}
+
+function email_validation(uemail) {
+  let mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+  if (uemail.value.match(mailformat)) {
+    return true;
+  } else {
+    alert("You have entered an invalid email address!");
+    uemail.focus();
+    return false;
+  }
 }
