@@ -47,7 +47,7 @@ function username_validation(uname, min, max) {
   let uname_len = uname.value.length;
   if (uname_len == 0 || uname_len >= max || uname_len < min) {
     alert(
-      "Username should not be empty / length be between " + min + "to " + max,
+      "Username should not be empty / length be between " + min + " to " + max,
     );
     uname.focus();
     return false;
