@@ -6,6 +6,9 @@ body {
 }
 
 input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="number"],
 select,
 textarea {
   width: 100%;
