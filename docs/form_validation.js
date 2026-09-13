@@ -9,8 +9,8 @@ function handleFormSubmit() {
 function formValidation() {
   let uname = document.registration.uname;
   let upass = document.registration.upass;
-  let ufname = document.registration.fname;
-  let ulname = document.registration.uname;
+  let ufname = document.registration.firstname;
+  let ulname = document.registration.lastname;
   let uemail = document.registration.email;
   let uadd = document.registration.address; /* User address */
   let ucountry = document.registration.country;
@@ -26,6 +26,7 @@ function formValidation() {
             if (address_validation(uadd)) {
               if (countryselect(ucountry)) {
                 if (zip_validation(uzip)) {
+                  return true;
                 }
               }
             }
@@ -115,6 +116,7 @@ function address_validation(uadd) {
     uadd.focus();
     return false;
   }
+  return true;
 }
 
 /* function country_validation(ucountry) {
