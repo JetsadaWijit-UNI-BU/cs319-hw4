@@ -64,3 +64,15 @@ function countryselect(ucountry) {
     return true;
   }
 }
+
+/* สร้างเอง */
+
+function pass_validation(upass, min, max) {
+  let upass_len = upass.value.length;
+  if (upass_len == 0 || upass_len > max || upass_len < min) {
+    alert("Password must be of length 6-16");
+    upass.focus();
+    return false;
+  }
+  return true;
+}
