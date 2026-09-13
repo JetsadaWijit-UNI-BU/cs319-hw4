@@ -23,6 +23,8 @@ function formValidation() {
         if (allLetter(ulname)) {
           /* Check last name */
           if (email_validation(uemail)) {
+            if (address_validation(uadd)) {
+            }
           }
         }
       }
@@ -92,6 +94,21 @@ function email_validation(uemail) {
   } else {
     alert("You have entered an invalid email address!");
     uemail.focus();
+    return false;
+  }
+}
+
+/* เป็นแบบ optional */
+/* ถ้าใส่ต้องไม่ต่ำกว่า 10 ตัวอักษร */
+function address_validation(uadd) {
+  let uadd_len = uadd.value.length;
+  if (uadd_len === 0) {
+    return true;
+  } else if (uadd_len < 10) {
+    alert(
+      "Address is optional, but if provided, it should be at least 10 characters.",
+    );
+    uadd.focus();
     return false;
   }
 }
