@@ -24,7 +24,7 @@ function formValidation() {
           /* Check last name */
           if (email_validation(uemail)) {
             if (address_validation(uadd)) {
-              if (country_validation()) {
+              if (country_validation(ucountry)) {
               }
             }
           }
