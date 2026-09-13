@@ -16,7 +16,7 @@ function formValidation() {
   let ucountry = document.registration.country;
   let uzip = document.registration.zip;
 
-  if (username_validation(uname, 5, 12) && allLetter(uname)) {
+  if (username_validation(uname, 5, 12)) {
     if (pass_validation(upass, 6, 16)) {
       if (allLetter(ufname)) {
         /* Check first name */
