@@ -24,6 +24,8 @@ function formValidation() {
           /* Check last name */
           if (email_validation(uemail)) {
             if (address_validation(uadd)) {
+              if (country_validation()) {
+              }
             }
           }
         }
@@ -110,5 +112,15 @@ function address_validation(uadd) {
     );
     uadd.focus();
     return false;
+  }
+}
+
+function country_validation(ucountry) {
+  if (ucountry.value == "") {
+    alert("Select your country from the list");
+    ucountry.focus();
+    return false;
+  } else {
+    return true;
   }
 }
