@@ -24,7 +24,7 @@ function formValidation() {
           /* Check last name */
           if (email_validation(uemail)) {
             if (address_validation(uadd)) {
-              if (country_validation(ucountry)) {
+              if (countryselect(ucountry)) {
                 if (zip_validation(uzip)) {
                 }
               }
@@ -117,7 +117,7 @@ function address_validation(uadd) {
   }
 }
 
-function country_validation(ucountry) {
+/* function country_validation(ucountry) {
   if (ucountry.value == "") {
     alert("Select your country from the list");
     ucountry.focus();
@@ -125,7 +125,7 @@ function country_validation(ucountry) {
   } else {
     return true;
   }
-}
+} */
 
 function zip_validation(uzip) {
   let numbers = /^[0-9]+$/;
