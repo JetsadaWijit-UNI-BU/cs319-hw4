@@ -46,6 +46,16 @@ input[type="submit"]:hover {
 }
 
 .checkbox-group,
-[type="checkbox"] {
+input[type="checkbox"] {
   margin-top: 10px;
+}
+
+.radio-group {
+  margin-bottom: 10px;
+}
+
+.radio-group,
+input[type="radio"] {
+  margin-top: 10px;
+  resize: vertical;
 }
