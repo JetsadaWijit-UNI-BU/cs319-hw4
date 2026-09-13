@@ -21,7 +21,7 @@ function formValidation() {
   let uadd = document.registration.address; /* User address */
   let ucountry = document.registration.country;
   let uzip = document.registration.zip;
-  let ulangs = document.registration.language; /* Language Checkbox */
+  // let ulangs = document.registration.language; /* Language Checkbox */
 
   if (username_validation(uname, 5, 12)) {
     if (pass_validation(upass, 6, 16)) {
@@ -33,9 +33,10 @@ function formValidation() {
             if (address_validation(uadd)) {
               if (countryselect(ucountry)) {
                 if (zip_validation(uzip)) {
-                  if (language_validation(ulangs)) {
+                  return true;
+                  /* if (language_validation(ulangs)) {
                     return true;
-                  }
+                  } */
                 }
               }
             }
@@ -149,7 +150,7 @@ function zip_validation(uzip) {
   }
 }
 
-function language_validation(ulangs) {
+/* function language_validation(ulangs) {
   for (let i = 0; i < ulangs.length; i++) {
     if (ulangs[i].checked) {
       return true;
@@ -157,4 +158,4 @@ function language_validation(ulangs) {
   }
   alert("Please select at least one language.");
   return false;
-}
+} */
