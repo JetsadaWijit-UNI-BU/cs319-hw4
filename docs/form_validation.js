@@ -15,6 +15,12 @@ function formValidation() {
   let uadd = document.registration.address; /* User address */
   let ucountry = document.registration.country;
   let uzip = document.registration.zip;
+
+  if (username_validation(uname, 5, 12)) {
+    if (pass_validation(upass, 6, 16)) {
+    }
+  }
+  return false;
 }
 
 /* ก็อปมาจากไฟล์เรียน */
