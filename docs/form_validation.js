@@ -16,3 +16,45 @@ function formValidation() {
   let ucountry = document.registration.country;
   let uzip = document.registration.zip;
 }
+
+/* ก็อปมาจากไฟล์เรียน */
+
+function username_validation(uname, min, max) {
+  let uname_len = uname.value.length;
+  if (uname_len == 0 || uname_len >= max || uname_len < min) {
+    alert(
+      "Username should not be empty / length be between " + min + "to " + max,
+    );
+    uname.focus();
+    return false;
+  }
+  return true;
+}
+
+function allLetter(inputtxt) {
+  let letters = /^[A-Za-z]+$/;
+  if (inputtxt.value.match(letters)) {
+    return true;
+  } else {
+    alert(inputtxt.labels[0].innerHTML + " must have alphabet characters only");
+    inputtxt.focus();
+    return false;
+  }
+}
+
+/*
+    let numbers = /^[0-9]+$/;
+    let letters = /^[A-Za-z]+$/;
+    let letterNumber = /^[0-9a-zA-Z]+$/;
+    let mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/; 
+*/
+
+function countryselect(ucountry) {
+  if (ucountry.value == "") {
+    alert("Select your country from the list");
+    ucountry.focus();
+    return false;
+  } else {
+    return true;
+  }
+}
