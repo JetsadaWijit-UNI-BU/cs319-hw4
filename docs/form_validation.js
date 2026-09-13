@@ -25,6 +25,8 @@ function formValidation() {
           if (email_validation(uemail)) {
             if (address_validation(uadd)) {
               if (country_validation(ucountry)) {
+                if (zip_validation(uzip)) {
+                }
               }
             }
           }
@@ -122,5 +124,16 @@ function country_validation(ucountry) {
     return false;
   } else {
     return true;
+  }
+}
+
+function zip_validation(uzip) {
+  let numbers = /^[0-9]+$/;
+  if (uzip.value.match(numbers)) {
+    return true;
+  } else {
+    alert("ZIP Code must have numeric characters only");
+    uzip.focus();
+    return false;
   }
 }
